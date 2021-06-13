@@ -4,6 +4,7 @@ import javax.naming.ldap.SortResponseControl;
 
 import abstracts.sorting;
 import algo.BubbleSort;
+import algo.SelectionSort;
 import interfaces.Isort;
 import util.utility;
 
@@ -16,7 +17,8 @@ public class SortingApp {
     }
 
     <T extends Comparable<? super T>> void sort(T[] data, boolean is_Ascending) {
-        Isort sortapp = new BubbleSort();
+        // Isort sortapp = new BubbleSort();
+        Isort sortapp = new SelectionSort();
         sortapp.sort(data, is_Ascending);
 
     }
