@@ -1,12 +1,23 @@
 package main;
 
+import javax.naming.ldap.SortResponseControl;
+
+import abstracts.sorting;
+import algo.BubbleSort;
+import interfaces.Isort;
 import util.utility;
 
 public class SortingApp {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        SortingApp sortingapp = new SortingApp();
+        Integer[] data = new Integer[] { 10, 50, 90, 5, 3, -10 };
+        sortingapp.sort(data, false);
+        utility.print(data);
+    }
 
-        utility.print(new Integer[] { 10, 20, 30 });
+    <T extends Comparable<? super T>> void sort(T[] data, boolean is_Ascending) {
+        Isort sortapp = new BubbleSort();
+        sortapp.sort(data, is_Ascending);
 
     }
 }
