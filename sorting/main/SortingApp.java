@@ -1,9 +1,6 @@
 package main;
 
-import javax.naming.ldap.SortResponseControl;
-
-import abstracts.sorting;
-import algo.BubbleSort;
+import algo.InsertionSort;
 import algo.SelectionSort;
 import interfaces.Isort;
 import util.utility;
@@ -11,14 +8,16 @@ import util.utility;
 public class SortingApp {
     public static void main(String[] args) {
         SortingApp sortingapp = new SortingApp();
-        Integer[] data = new Integer[] { 10, 50, 90, 5, 3, -10 };
+        Integer[] data = new Integer[] { 5, 50, 1, 90, 3, -10 };
+        utility.print(data);
         sortingapp.sort(data, false);
         utility.print(data);
     }
 
     <T extends Comparable<? super T>> void sort(T[] data, boolean is_Ascending) {
         // Isort sortapp = new BubbleSort();
-        Isort sortapp = new SelectionSort();
+        // Isort sortapp = new SelectionSort();
+        Isort sortapp = new InsertionSort();
         sortapp.sort(data, is_Ascending);
 
     }
