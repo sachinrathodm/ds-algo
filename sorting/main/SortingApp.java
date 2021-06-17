@@ -3,6 +3,7 @@ package main;
 import algo.InsertionSort;
 import algo.MergeSort;
 import algo.QuickSort;
+import algo.ShellSort;
 import interfaces.Isort;
 import util.utility;
 
@@ -20,7 +21,8 @@ public class SortingApp {
         // Isort sortapp = new SelectionSort();
         // Isort sortapp = new InsertionSort();
         // Isort sortapp = new MergeSort();
-        Isort sortapp = new QuickSort();
+        // Isort sortapp = new QuickSort();
+        Isort sortapp = new ShellSort();
         sortapp.sort(data, is_Ascending);
 
     }
