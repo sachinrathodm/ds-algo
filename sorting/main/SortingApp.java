@@ -1,7 +1,7 @@
 package main;
 
 import algo.InsertionSort;
-import algo.SelectionSort;
+import algo.MergeSort;
 import interfaces.Isort;
 import util.utility;
 
@@ -17,7 +17,8 @@ public class SortingApp {
     <T extends Comparable<? super T>> void sort(T[] data, boolean is_Ascending) {
         // Isort sortapp = new BubbleSort();
         // Isort sortapp = new SelectionSort();
-        Isort sortapp = new InsertionSort();
+        // Isort sortapp = new InsertionSort();
+        Isort sortapp = new MergeSort();
         sortapp.sort(data, is_Ascending);
 
     }
